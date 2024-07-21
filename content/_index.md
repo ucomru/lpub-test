@@ -1,6 +1,6 @@
 ---
 title: 'Libertas Publica'
-date: 2024-07-20T23:05:29+03:00
+date: 2024-07-21T22:05:29+03:00
 draft: false
 ---
 

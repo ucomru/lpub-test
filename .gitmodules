@@ -1,7 +1,0 @@
-[submodule "themes/papermod"]
-	path = themes/papermod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
-
-[submodule "themes/hugo-blox"]
-	path = themes/hugo-blox
-	url = https://github.com/username/hugo-blox.git

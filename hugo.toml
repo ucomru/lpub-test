@@ -1,8 +1,7 @@
 baseURL = "http://lpub.org/"
 languageCode = "en-us"
 title = "Libertas Publica"
-theme = "hugo-blox"
-# theme = "papermod"
+theme = "hugo-blox" # theme = "papermod"
 
 [params]
 description = "Open Information with Open Minds"
