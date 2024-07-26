@@ -1,0 +1,29 @@
+baseURL: "http://lpub.org/"
+languageCode: "en-us"
+title: "Libertas Publica"
+theme: PaperMod
+
+params:
+  description: "Open Information with Open Minds"
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: Posts
+      url: /posts/
+      weight: 2
+    - name: Documents
+      url: /documents/
+      weight: 3
+    - name: Contact
+      url: /contact/
+      weight: 4
+
+# Enable HTML tags in Markdown files like contact.md
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true

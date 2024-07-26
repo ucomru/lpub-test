@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=54340&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Documents | Libertas Publica</title>
+<meta name="keywords" content="">
+<meta name="description" content="Шаги для настройки цветов
+Создайте файл CSS для кастомизации цветов: • Создайте файл theme-vars-override.css в директории assets/css/extended/ вашего проекта Hugo. Добавьте кастомные цвета: • В этот файл можно добавить CSS переменные для настройки различных элементов темы. Пример кода: theme-vars-override.css
+:root { --theme: #ffffff; /* Основной фон */ --entry: #f0f0f0; /* Вторичный фон */ --primary: #007bff; /* Основной цвет */ --secondary: #6c757d; /* Дополнительный цвет */ --tertiary: #e9ecef; /* Третичный цвет */ --content: #212529; /* Цвет текста */ --hljs-bg: #1e1e1e; /* Фон для подсветки синтаксиса */ --code-bg: #f8f9fa; /* Фон для кода */ --border: #dee2e6; /* Цвет границ */ } .">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:54340/documents/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c40b7ded35c177171060b2938f5b9f9ca54fbc23c0f4de847823ab2d242d2c09.css" integrity="sha256-xAt97TXBdxcQYLKTj1ufnKVPvCPA9N6EeCOrLSQtLAk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:54340/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:54340/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:54340/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:54340/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:54340/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:54340/documents/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:54340/documents/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:54340/" accesskey="h" title="Libertas Publica (Alt + H)">Libertas Publica</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:54340/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:54340/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:54340/documents/" title="Documents">
+                    <span class="active">Documents</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:54340/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Documents
+  </h1>
+</header>
+<div class="post-content"><p>Шаги для настройки цветов</p>
+<ol>
+<li>Создайте файл CSS для кастомизации цветов:
+• Создайте файл theme-vars-override.css в директории assets/css/extended/ вашего проекта Hugo.</li>
+<li>Добавьте кастомные цвета:
+• В этот файл можно добавить CSS переменные для настройки различных элементов темы. Пример кода:</li>
+</ol>
+<p><code>theme-vars-override.css</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>:<span style="color:#a6e22e">root</span> {
+</span></span><span style="display:flex;"><span>    --theme: <span style="color:#ae81ff">#ffffff</span>; <span style="color:#75715e">/* Основной фон */</span>
+</span></span><span style="display:flex;"><span>    --entry: <span style="color:#ae81ff">#f0f0f0</span>; <span style="color:#75715e">/* Вторичный фон */</span>
+</span></span><span style="display:flex;"><span>    --primary: <span style="color:#ae81ff">#007bff</span>; <span style="color:#75715e">/* Основной цвет */</span>
+</span></span><span style="display:flex;"><span>    --secondary: <span style="color:#ae81ff">#6c757d</span>; <span style="color:#75715e">/* Дополнительный цвет */</span>
+</span></span><span style="display:flex;"><span>    --tertiary: <span style="color:#ae81ff">#e9ecef</span>; <span style="color:#75715e">/* Третичный цвет */</span>
+</span></span><span style="display:flex;"><span>    --content: <span style="color:#ae81ff">#212529</span>; <span style="color:#75715e">/* Цвет текста */</span>
+</span></span><span style="display:flex;"><span>    --hljs-bg: <span style="color:#ae81ff">#1e1e1e</span>; <span style="color:#75715e">/* Фон для подсветки синтаксиса */</span>
+</span></span><span style="display:flex;"><span>    --code-bg: <span style="color:#ae81ff">#f8f9fa</span>; <span style="color:#75715e">/* Фон для кода */</span>
+</span></span><span style="display:flex;"><span>    --border: <span style="color:#ae81ff">#dee2e6</span>; <span style="color:#75715e">/* Цвет границ */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">dark</span> {
+</span></span><span style="display:flex;"><span>    --theme: <span style="color:#ae81ff">#343a40</span>; <span style="color:#75715e">/* Темный фон */</span>
+</span></span><span style="display:flex;"><span>    --entry: <span style="color:#ae81ff">#495057</span>; <span style="color:#75715e">/* Вторичный темный фон */</span>
+</span></span><span style="display:flex;"><span>    --primary: <span style="color:#ae81ff">#adb5bd</span>; <span style="color:#75715e">/* Основной цвет для темной темы */</span>
+</span></span><span style="display:flex;"><span>    --secondary: <span style="color:#ae81ff">#6c757d</span>; <span style="color:#75715e">/* Дополнительный цвет для темной темы */</span>
+</span></span><span style="display:flex;"><span>    --tertiary: <span style="color:#ae81ff">#ced4da</span>; <span style="color:#75715e">/* Третичный цвет для темной темы */</span>
+</span></span><span style="display:flex;"><span>    --content: <span style="color:#ae81ff">#f8f9fa</span>; <span style="color:#75715e">/* Цвет текста для темной темы */</span>
+</span></span><span style="display:flex;"><span>    --hljs-bg: <span style="color:#ae81ff">#2e2e33</span>; <span style="color:#75715e">/* Фон для подсветки синтаксиса в темной теме */</span>
+</span></span><span style="display:flex;"><span>    --code-bg: <span style="color:#ae81ff">#37383e</span>; <span style="color:#75715e">/* Фон для кода в темной теме */</span>
+</span></span><span style="display:flex;"><span>    --border: <span style="color:#ae81ff">#495057</span>; <span style="color:#75715e">/* Цвет границ для темной темы */</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Для создания гармоничных цветовых схем можно использовать онлайн-инструменты, такие как:</p>
+<p>• Coolors: Coolors.co
+• Adobe Color: Adobe Color
+• Paletton: Paletton
+• Color Hunt: Color Hunt</p>
+<p><code>theme-vars-override.css</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">latte</span> {
+</span></span><span style="display:flex;"><span>    --color-bg: <span style="color:#ae81ff">#eff1f5</span>;
+</span></span><span style="display:flex;"><span>    --color-primary: <span style="color:#ae81ff">#007bff</span>;
+</span></span><span style="display:flex;"><span>    --color-secondary: <span style="color:#ae81ff">#6c757d</span>;
+</span></span><span style="display:flex;"><span>    --color-tertiary: <span style="color:#ae81ff">#ccd0da</span>;
+</span></span><span style="display:flex;"><span>    --color-text: <span style="color:#ae81ff">#4c4f69</span>;
+</span></span><span style="display:flex;"><span>    --color-hljs-bg: <span style="color:#ae81ff">#e6e9ef</span>;
+</span></span><span style="display:flex;"><span>    --color-code-bg: <span style="color:#ae81ff">#f5f5f5</span>;
+</span></span><span style="display:flex;"><span>    --color-border: <span style="color:#ae81ff">#dee2e6</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Подсветка синтаксиса */</span>
+</span></span><span style="display:flex;"><span>    --color-syntax-bg: <span style="color:#ae81ff">#ffffff</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-text: <span style="color:#ae81ff">#4c4f69</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-keyword: <span style="color:#ae81ff">#007bff</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-string: <span style="color:#ae81ff">#a6d189</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-function: <span style="color:#ae81ff">#1e66f5</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-comment: <span style="color:#ae81ff">#7c7f93</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-variable: <span style="color:#ae81ff">#ca9ee6</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">frappe</span> {
+</span></span><span style="display:flex;"><span>    --color-bg: <span style="color:#ae81ff">#303446</span>;
+</span></span><span style="display:flex;"><span>    --color-primary: <span style="color:#ae81ff">#007bff</span>;
+</span></span><span style="display:flex;"><span>    --color-secondary: <span style="color:#ae81ff">#6c757d</span>;
+</span></span><span style="display:flex;"><span>    --color-tertiary: <span style="color:#ae81ff">#414559</span>;
+</span></span><span style="display:flex;"><span>    --color-text: <span style="color:#ae81ff">#c6d0f5</span>;
+</span></span><span style="display:flex;"><span>    --color-hljs-bg: <span style="color:#ae81ff">#292c3c</span>;
+</span></span><span style="display:flex;"><span>    --color-code-bg: <span style="color:#ae81ff">#37383e</span>;
+</span></span><span style="display:flex;"><span>    --color-border: <span style="color:#ae81ff">#495057</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Подсветка синтаксиса */</span>
+</span></span><span style="display:flex;"><span>    --color-syntax-bg: <span style="color:#ae81ff">#303446</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-text: <span style="color:#ae81ff">#c6d0f5</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-keyword: <span style="color:#ae81ff">#8caaee</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-string: <span style="color:#ae81ff">#a6d189</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-function: <span style="color:#ae81ff">#85c1dc</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-comment: <span style="color:#ae81ff">#737994</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-variable: <span style="color:#ae81ff">#f5a97f</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">macchiato</span> {
+</span></span><span style="display:flex;"><span>    --color-bg: <span style="color:#ae81ff">#303446</span>;
+</span></span><span style="display:flex;"><span>    --color-primary: <span style="color:#ae81ff">#007bff</span>;
+</span></span><span style="display:flex;"><span>    --color-secondary: <span style="color:#ae81ff">#6c757d</span>;
+</span></span><span style="display:flex;"><span>    --color-tertiary: <span style="color:#ae81ff">#414559</span>;
+</span></span><span style="display:flex;"><span>    --color-text: <span style="color:#ae81ff">#c6d0f5</span>;
+</span></span><span style="display:flex;"><span>    --color-hljs-bg: <span style="color:#ae81ff">#292c3c</span>;
+</span></span><span style="display:flex;"><span>    --color-code-bg: <span style="color:#ae81ff">#37383e</span>;
+</span></span><span style="display:flex;"><span>    --color-border: <span style="color:#ae81ff">#495057</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Подсветка синтаксиса */</span>
+</span></span><span style="display:flex;"><span>    --color-syntax-bg: <span style="color:#ae81ff">#303446</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-text: <span style="color:#ae81ff">#c6d0f5</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-keyword: <span style="color:#ae81ff">#ca9ee6</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-string: <span style="color:#ae81ff">#a6d189</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-function: <span style="color:#ae81ff">#8caaee</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-comment: <span style="color:#ae81ff">#737994</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-variable: <span style="color:#ae81ff">#f5a97f</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">mocha</span> {
+</span></span><span style="display:flex;"><span>    --color-bg: <span style="color:#ae81ff">#303446</span>;
+</span></span><span style="display:flex;"><span>    --color-primary: <span style="color:#ae81ff">#007bff</span>;
+</span></span><span style="display:flex;"><span>    --color-secondary: <span style="color:#ae81ff">#6c757d</span>;
+</span></span><span style="display:flex;"><span>    --color-tertiary: <span style="color:#ae81ff">#414559</span>;
+</span></span><span style="display:flex;"><span>    --color-text: <span style="color:#ae81ff">#c6d0f5</span>;
+</span></span><span style="display:flex;"><span>    --color-hljs-bg: <span style="color:#ae81ff">#292c3c</span>;
+</span></span><span style="display:flex;"><span>    --color-code-bg: <span style="color:#ae81ff">#37383e</span>;
+</span></span><span style="display:flex;"><span>    --color-border: <span style="color:#ae81ff">#495057</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Подсветка синтаксиса */</span>
+</span></span><span style="display:flex;"><span>    --color-syntax-bg: <span style="color:#ae81ff">#303446</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-text: <span style="color:#ae81ff">#c6d0f5</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-keyword: <span style="color:#ae81ff">#8caaee</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-string: <span style="color:#ae81ff">#a6d189</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-function: <span style="color:#ae81ff">#85c1dc</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-comment: <span style="color:#ae81ff">#737994</span>;
+</span></span><span style="display:flex;"><span>    --color-syntax-variable: <span style="color:#ae81ff">#f5a97f</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Для каждой палитры (Latte, Frappé, Macchiato, Mocha) адаптируем CSS с цветами для Hugo PaperMod. Вот пример:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">noClasses</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">style</span> = <span style="color:#e6db74">&#34;monokai&#34;</span> <span style="color:#75715e"># Здесь вы можете указать стиль подсветки, например, &#34;monokai&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">lineNoStart</span> = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">lineNos</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">lineNumbersInTable</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div>
+
+</div>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:54340/">Libertas Publica</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
