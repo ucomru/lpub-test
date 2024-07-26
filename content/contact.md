@@ -5,6 +5,9 @@ draft: false
 ---
 
 
+## simple
+
+
 {{< rawhtml >}}
 
 <form id="contact-form" name="contact" method="POST" data-netlify="true">
@@ -31,32 +34,43 @@ draft: false
 ---
 
 
-## OLD
+## with JS
 
 
 {{< rawhtml >}}
 
-<form id="contact-form" action="https://formspree.io/f/xkgwolez" method="POST">
+<form id="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="return customizeSubject()">
     <label for="contact-name">Name</label>
-    <input type="text" id="contact-name" name="name" required>
+    <input type="text" id="contact-name" name="name" maxlength="45" required>
     <label for="contact-email">Email</label>
     <input type="email" id="contact-email" name="_replyto" required>
+    <label for="contact-subject">Subject</label>
+    <input type="text" id="subject" name="subject" maxlength="60" required>
     <div class="radio-container">
         <input type="radio" id="message" name="message-type" value="Message" checked>
         <label for="message">Message</label>
         <input type="radio" id="security-alert" name="message-type" value="Security Alert">
         <label for="security-alert">Security Alert</label>
     </div>
+    <label for="contact-message">Message</label>
     <textarea id="contact-message" name="message" required></textarea>
     <button type="submit" id="contact-submit">Send</button>
 </form>
 
+<script>
+function customizeSubject() {
+    var form = document.getElementById('contact-form');
+    var messageType = form.querySelector('input[name="message-type"]:checked').value;
+    var subject = form.querySelector('input[name="subject"]').value;
+    var customSubject = "Lpub.org " + messageType + ": " + subject;
+    var customSubjectInput = document.createElement('input');
+    customSubjectInput.type = 'hidden';
+    customSubjectInput.name = 'custom-subject';
+    customSubjectInput.value = customSubject;
+    form.appendChild(customSubjectInput);
+    return true;
+}
+</script>
+
 {{< /rawhtml >}}
-
-
----
----
-
-
-
 
