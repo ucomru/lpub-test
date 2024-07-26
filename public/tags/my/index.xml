@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My on Libertas Publica</title>
-    <link>http://localhost:56028/tags/my/</link>
+    <link>http://lpub.org/tags/my/</link>
     <description>Recent content in My on Libertas Publica</description>
     <generator>Hugo -- 0.129.0</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Sat, 20 Jul 2024 23:05:30 +0300</lastBuildDate>
-    <atom:link href="http://localhost:56028/tags/my/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://lpub.org/tags/my/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My</title>
-      <link>http://localhost:56028/my/</link>
+      <link>http://lpub.org/my/</link>
       <pubDate>Sat, 20 Jul 2024 23:05:30 +0300</pubDate>
-      <guid>http://localhost:56028/my/</guid>
+      <guid>http://lpub.org/my/</guid>
       <description>Шаги для настройки цветов
 Создайте файл CSS для кастомизации цветов: • Создайте файл theme-vars-override.css в директории assets/css/extended/ вашего проекта Hugo. Добавьте кастомные цвета: • В этот файл можно добавить CSS переменные для настройки различных элементов темы. Пример кода: :root { --theme: #ffffff; /* Основной фон */ --entry: #f0f0f0; /* Вторичный фон */ --primary: #007bff; /* Основной цвет */ --secondary: #6c757d; /* Дополнительный цвет */ --tertiary: #e9ecef; /* Третичный цвет */ --content: #212529; /* Цвет текста */ --hljs-bg: #1e1e1e; /* Фон для подсветки синтаксиса */ --code-bg: #f8f9fa; /* Фон для кода */ --border: #dee2e6; /* Цвет границ */ } .</description>
     </item>

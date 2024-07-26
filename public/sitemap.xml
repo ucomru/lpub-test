@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:56028/</loc>
+    <loc>http://lpub.org/</loc>
     <lastmod>2024-07-21T22:05:29+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:56028/contact/</loc>
+    <loc>http://lpub.org/contact/</loc>
     <lastmod>2024-07-20T23:05:30+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:56028/documents/</loc>
+    <loc>http://lpub.org/documents/</loc>
     <lastmod>2024-07-20T23:05:30+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:56028/tags/my/</loc>
+    <loc>http://lpub.org/tags/my/</loc>
     <lastmod>2024-07-20T23:05:30+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:56028/my/</loc>
+    <loc>http://lpub.org/my/</loc>
     <lastmod>2024-07-20T23:05:30+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:56028/tags/</loc>
+    <loc>http://lpub.org/tags/</loc>
     <lastmod>2024-07-20T23:05:30+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:56028/categories/</loc>
+    <loc>http://lpub.org/categories/</loc>
   </url>
 </urlset>
