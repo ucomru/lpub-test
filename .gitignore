@@ -1,0 +1,5 @@
+# Hugo files
+/public/
+/resources/
+/node_modules/
+/tmp/
