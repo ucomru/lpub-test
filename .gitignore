@@ -1,7 +1,9 @@
-# Hugo files
-/public/
-
 # Local
 .DS_Store
 __MACOSX/
 __WORK/
+
+# Hugo files
+/public/
+/resources/_gen/
+/.hugo_build.lock
