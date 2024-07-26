@@ -1,5 +1,7 @@
 # Hugo files
 /public/
-/resources/
-/node_modules/
-/tmp/
+
+# Local
+.DS_Store
+__MACOSX/
+__WORK/
