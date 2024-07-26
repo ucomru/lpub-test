@@ -23,14 +23,18 @@ draft: false
 
 {{< /rawhtml >}}
 
+
+---
+---
+
+
 {{< rawhtml >}}
 
-<form id="contact-form" action="https://getform.io/f/azylgmyb" method="POST">
+<form id="contact-form" name="contact" method="POST" data-netlify="true">
     <label for="contact-name">Name</label>
     <input type="text" id="contact-name" name="name" required>
     <label for="contact-email">Email</label>
     <input type="email" id="contact-email" name="_replyto" required>
-    <input type="hidden" name="_gotcha" style="display:none !important">
     <div class="radio-container">
         <input type="radio" id="message" name="message-type" value="Message" checked>
         <label for="message">Message</label>
