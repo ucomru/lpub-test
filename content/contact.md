@@ -45,7 +45,7 @@ draft: false
     <label for="contact-email">Email</label>
     <input type="email" id="contact-email" name="_replyto" required>
     <label for="contact-subject">Subject</label>
-    <input type="text" id="subject" name="subject" maxlength="60" required>
+    <input type="text" id="contact-subject" name="message-subject" maxlength="60" required>
     <div class="radio-container">
         <input type="radio" id="message" name="message-type" value="Message" checked>
         <label for="message">Message</label>
@@ -61,13 +61,13 @@ draft: false
 function customizeSubject() {
     var form = document.getElementById('contact-form');
     var messageType = form.querySelector('input[name="message-type"]:checked').value;
-    var subject = form.querySelector('input[name="subject"]').value;
-    var customSubject = "Lpub.org " + messageType + ": " + subject;
-    var customSubjectInput = document.createElement('input');
-    customSubjectInput.type = 'hidden';
-    customSubjectInput.name = 'custom-subject';
-    customSubjectInput.value = customSubject;
-    form.appendChild(customSubjectInput);
+    var messageSubject = form.querySelector('input[name="message-subject"]').value;
+    var subject = "Lpub.org " + messageType + ": " + messageSubject;
+    var subjectInput = document.createElement('input');
+    subjectInput.type = 'hidden';
+    subjectInput.name = 'subject';
+    subjectInput.value = subject;
+    form.appendChild(subjectInput);
     return true;
 }
 </script>
