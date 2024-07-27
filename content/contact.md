@@ -20,7 +20,6 @@ draft: false
         <input type="radio" id="contact-radio-alert" name="message-type" value="Security Alert">
         <label for="contact-radio--alert">Security Alert</label>
     </div>
-    <label for="contact-message">Message</label>
     <textarea id="contact-message" name="message" required></textarea>
     <input type="hidden" id="contact-subject" name="subject">
     <button type="submit" id="contact-submit">Send</button>
