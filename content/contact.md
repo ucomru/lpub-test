@@ -4,7 +4,6 @@ date: 2024-07-20T23:05:30+03:00
 draft: false
 ---
 
-
 {{< rawhtml >}}
 
 <form id="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="return customizeSubject()">
@@ -38,3 +37,9 @@ function customizeSubject() {
 </script>
 
 {{< /rawhtml >}}
+
+---
+
+If you discover any security vulnerabilities or issues, please select "Security Alert" and 
+provide detailed information in the message field. We take all security concerns seriously and 
+will address them promptly.
