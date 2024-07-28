@@ -15,10 +15,10 @@ draft: false
     <label for="contact-message-subject">Subject</label>
     <input type="text" id="contact-message-subject" name="message-subject" maxlength="60" required>
     <div class="radio-container">
-        <input type="radio" id="contact-radio-message" name="message-type" value="Message" checked>
         <label for="contact-radio-message">Message</label>
-        <input type="radio" id="contact-radio-alert" name="message-type" value="Security Alert">
+        <input type="radio" id="contact-radio-message" name="message-type" value="Message" checked>
         <label for="contact-radio--alert">Security Alert</label>
+        <input type="radio" id="contact-radio-alert" name="message-type" value="Security Alert">
     </div>
     <textarea id="contact-message" name="message" required></textarea>
     <input type="hidden" id="contact-subject" name="subject">
