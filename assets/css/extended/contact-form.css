@@ -12,47 +12,58 @@
     ```
 */
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
+/* Clean contact form styles for PaperMod/Hugo */
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 0.6em;
+    margin-bottom: 1em;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background-color: var(--entry);
     color: var(--primary);
 }
 
-#contact-form textarea {
+.contact-form textarea {
     min-height: 7.5em;
     resize: vertical;
 }
 
-#contact-form input[type="text"]:focus,
-#contact-form input[type="email"]:focus,
-#contact-form textarea:focus {
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
     border-color: var(--primary);
     outline: none;
 }
 
-#contact-form .radio-container {
+.contact-form .form-group {
+    margin-bottom: 1em;
+}
+
+.contact-form .form-label {
+    display: block;
+    margin-bottom: 0.4em;
+    font-weight: 600;
+}
+
+.contact-form fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 1em;
     display: flex;
+    gap: 1em;
     align-items: center;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-#contact-form .radio-container input[type="radio"] {
-    margin-right: 25px;
+.contact-form fieldset label {
+    margin: 0;
 }
 
-#contact-form .radio-container label {
-    margin-right: 5px;
-    margin-bottom: 0;
-}
-
-#contact-form button[type="submit"] {
-    padding: 10px 20px;
+.contact-form button[type="submit"] {
+    padding: 0.6em 1.2em;
     background-color: var(--primary);
     color: var(--theme);
     border: 2px solid var(--border);
@@ -61,6 +72,6 @@
     transition: border-color 0.3s ease;
 }
 
-#contact-form button[type="submit"]:hover {
-    border: 2px solid var(--secondary);
+.contact-form button[type="submit"]:hover {
+    border-color: var(--secondary);
 }

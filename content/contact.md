@@ -7,31 +7,46 @@ draft: false
 
 {{< rawhtml >}}
 
-<form id="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="return customizeSubject()">
-    <label for="contact-name">Name</label>
-    <input type="text" id="contact-name" name="name" maxlength="45" required>
-    <label for="contact-email">Email</label>
-    <input type="email" id="contact-email" name="_replyto" required>
-    <label for="contact-message-subject">Subject</label>
-    <input type="text" id="contact-message-subject" name="message-subject" maxlength="60" required>
-    <div class="radio-container">
-        <label for="contact-radio-message">Message</label>
-        <input type="radio" id="contact-radio-message" name="message-type" value="Message" checked>
-        <label for="contact-radio--alert">Security Alert</label>
-        <input type="radio" id="contact-radio-alert" name="message-type" value="Security Alert">
-    </div>
-    <textarea id="contact-message" name="message" required></textarea>
-    <input type="hidden" id="contact-subject" name="subject">
-    <button type="submit" id="contact-submit">Send</button>
+<form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return customizeSubject()">
+  <input type="hidden" name="form-name" value="contact">
+  <input type="text" name="bot-field" style="display:none">
+
+  <div class="form-group">
+    <label class="form-label" for="name">Name</label>
+    <input type="text" id="name" name="name" maxlength="45" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for="message-subject">Subject</label>
+    <input type="text" id="message-subject" name="message-subject" maxlength="60" required>
+  </div>
+
+  <fieldset>
+    <legend class="form-label">Message Type</legend>
+    <label><input type="radio" name="message-type" value="Message" checked> Message</label>
+    <label><input type="radio" name="message-type" value="Security Alert"> Security Alert</label>
+  </fieldset>
+
+  <div class="form-group">
+    <label class="form-label" for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+
+  <input type="hidden" id="final-subject" name="subject">
+
+  <button type="submit">Send</button>
 </form>
 
 <script>
 function customizeSubject() {
-    var form = document.getElementById('contact-form');
-    var messageSubject = form.querySelector('input[name="message-subject"]').value;
-    var messageType = form.querySelector('input[name="message-type"]:checked').value;
-    var subject = "Lpub.org " + messageType + ": " + messageSubject;
-    var subjectInput = form.querySelector('input[name="subject"]');
+    const form = document.forms['contact'];
+    const subjectInput = form.querySelector('input[name="subject"]');
+    const subject = `Lpub.org ${form["message-type"].value}: ${form["message-subject"].value}`;
     subjectInput.value = subject;
     return true;
 }
@@ -41,6 +56,29 @@ function customizeSubject() {
 
 ---
 
-If you discover any security vulnerabilities or issues, please select "Security Alert" and 
-provide detailed information in the message field. We take all security concerns seriously and 
-will address them promptly.
+If you discover any vulnerabilities or security issues, please choose “Security Alert” above and describe the issue in detail. We take all reports seriously.
+
+---
+---
+
+{{< rawhtml >}}
+
+<p>If you have any questions or concerns, feel free to <a href="#" id="email-link">write us</a></p>
+
+<script>
+(function(){
+    const user = "test_addr";
+    const domain = "lpub.org";
+    const link = document.getElementById("email-link");
+    link.setAttribute("href", "mailto:" + user + "@" + domain);
+    link.textContent = user + "@" + domain;
+})();
+</script>
+
+<noscript>
+  <p><em>[Enable JavaScript to view]</em></p>
+</noscript>
+
+{{< /rawhtml >}}
+
+---
