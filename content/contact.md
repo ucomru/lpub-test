@@ -7,7 +7,9 @@ draft: false
 
 {{< rawhtml >}}
 
-<form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return customizeSubject()">
+<form class="contact-form" name="contact" method="POST"
+      data-netlify="true" netlify-honeypot="bot-field"
+      onsubmit="return customizeSubject()">
   <input type="hidden" name="form-name" value="contact">
   <input type="text" name="bot-field" style="display:none">
 
@@ -56,65 +58,35 @@ function customizeSubject() {
 
 ---
 
-If you discover any vulnerabilities or security issues, please choose “Security Alert” above and describe the issue in detail. We take all reports seriously.
+If you discover any vulnerabilities or security issues, please choose “Security Alert” above
+and describe the issue in detail. We take all reports seriously.
 
 ---
 ---
 
-{{< rawhtml >}}
-
-<p>If you have any questions or concerns, feel free to <a href="#" id="email-link">write us</a></p>
-
-<script>
-(function(){
-    const user = "test_addr";
-    const domain = "lpub.org";
-    const link = document.getElementById("email-link");
-    link.setAttribute("href", "mailto:" + user + "@" + domain);
-    link.textContent = user + "@" + domain;
-})();
-</script>
-
-<noscript>
-  <p><em>[Enable JavaScript to view]</em></p>
-</noscript>
-
-{{< /rawhtml >}}
-
----
----
-
-{{< rawhtml >}}
-
-<p>If you'd like to contact us, click the button below to reveal the email address.</p>
-
-<button id="reveal-email" style="padding: 0.5em 1em;">Show Email</button>
-<p id="email-container" style="margin-top: 1em;"></p>
-
-<script>
-  document.getElementById("reveal-email").addEventListener("click", function () {
-    const userEnc = "aW5mbw==";     // base64 for 'info'
-    const domainEnc = "bHB1Yi5vcmc="; // base64 for 'lpub.org'
-
-    const user = atob(userEnc);
-    const domain = atob(domainEnc);
-    const email = user + "@" + domain;
-
-    const container = document.getElementById("email-container");
-    const link = document.createElement("a");
-    link.href = "mailto:" + email;
-    link.textContent = email;
-
-    container.appendChild(link);
-    this.style.display = "none";
-  });
-</script>
-
-<noscript>
-  <p>Email: <em>[Enable JavaScript to view email address]</em></p>
-</noscript>
-
-{{< /rawhtml >}}
+- Email: {{< rawhtml >}}
+  <style>
+    #reveal-email {
+      border: 1.5px solid #888;
+      border-radius: 6px;
+      padding: 0.1em 0.4em;
+      font-size: 0.8em;
+    }
+  </style>
+  <button id="reveal-email">Click to show</button>
+  <span id="email-field"></span>
+  <noscript><em>Enable JavaScript to view</em></noscript>
+  <script>
+    document.getElementById("reveal-email")?.addEventListener("click", () => {
+      const u = atob("aW5mbw==");
+      const d = atob("bHB1Yi5vcmc=");
+      const e = `${u}@${d}`;
+      const f = document.getElementById("email-field");
+      f.innerHTML = `<a href="mailto:${e}">${e}</a>`;
+      document.getElementById("reveal-email").style.display = "none";
+    });
+  </script>
+  {{< /rawhtml >}}
 
 ---
-
+---
