@@ -67,6 +67,7 @@ and describe the issue in detail. We take all reports seriously.
 - Email: {{< rawhtml >}}
   <style>
     #reveal-email {
+      margin-left: 0.4em;
       border: 1.5px solid #888;
       border-radius: 6px;
       padding: 0.1em 0.4em;
