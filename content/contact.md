@@ -82,3 +82,39 @@ If you discover any vulnerabilities or security issues, please choose “Securit
 {{< /rawhtml >}}
 
 ---
+---
+
+{{< rawhtml >}}
+
+<p>If you'd like to contact us, click the button below to reveal the email address.</p>
+
+<button id="reveal-email" style="padding: 0.5em 1em;">Show Email</button>
+<p id="email-container" style="margin-top: 1em;"></p>
+
+<script>
+  document.getElementById("reveal-email").addEventListener("click", function () {
+    const userEnc = "aW5mbw==";     // base64 for 'info'
+    const domainEnc = "bHB1Yi5vcmc="; // base64 for 'lpub.org'
+
+    const user = atob(userEnc);
+    const domain = atob(domainEnc);
+    const email = user + "@" + domain;
+
+    const container = document.getElementById("email-container");
+    const link = document.createElement("a");
+    link.href = "mailto:" + email;
+    link.textContent = email;
+
+    container.appendChild(link);
+    this.style.display = "none";
+  });
+</script>
+
+<noscript>
+  <p>Email: <em>[Enable JavaScript to view email address]</em></p>
+</noscript>
+
+{{< /rawhtml >}}
+
+---
+
