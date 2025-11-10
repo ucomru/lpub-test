@@ -22,8 +22,8 @@ menu:
       weight: 4
 
 # Enable HTML tags in Markdown files like contact.md
-markup:
-  defaultMarkdownHandler: goldmark
-  goldmark:
-    renderer:
-      unsafe: true
+# markup:
+#   defaultMarkdownHandler: goldmark
+#   goldmark:
+#     renderer:
+#       unsafe: true
